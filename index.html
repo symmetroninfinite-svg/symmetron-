@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>    
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>SYMMETRON</title>    
+    <style>    
+      /* Essential for responsive borders */    
+      * {         box-sizing: border-box;    }    
+      body {
+        padding-top: 90px;                
+        margin: 0;        
+        /* Use min-height so content isn't cut off on short, wide screens */        
+        min-height: 100vh;         
+        display: flex;        
+        flex-direction: column;        
+        justify-content: center;        
+        align-items: center;        
+        background-color: #f0f2f5;        
+        font-family: sans-serif;        
+        /* Padding keeps content from touching screen edges on mobile */        
+        padding: 20px;         
+        box-sizing: border-box;        
+        /* ... your existing flex properties ... */        
+        /* --- THE RESPONSIVE BODY BORDER --- */        
+        border: 10px solid #4F4FFF; /* Thickness adjusts to screen edges */        
+        border: 10px solid #4F4FFF;         
+        background-color: #4F4FFF;                        
+        /* 1. Add your image */        
+        background-image: url('IMG_0171.png');        
+        /* 2. Make it cover the whole screen */        
+        background-size: cover;             
+        /* 3. Keep it centered and prevent repeating */        
+        background-position: center;        
+        background-repeat: no-repeat;            
+        /* 4. Optional: Keep background still when scrolling */        
+        background-attachment: fixed;         
+        padding-bottom: 60px;    }    
+        /* 1. The Navigation Bar Container */
+        .top-nav {    
+          position: fixed; 
+          /* Stays at the top while scrolling */    
+          top: 0;   
+          left: 0;    
+          width: 100%;    
+          height: 70px;    
+          background-color: #4F4FFF;  
+          color: #fff;        
+          display: flex;    
+          justify-content: space-between; 
+          /* Pushes items to opposite ends */    
+          align-items: center;    
+          padding: 0 5%; 
+          /* Responsive side padding */    
+          box-sizing: border-box;    
+          z-index: 1000; 
+        /* Ensures it stays above the wireframe card */}
+        /* 2. Logo Styling */
+        /* Styling for the SVG near the Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between SVG and text */
+        }
+
+        .svg-icon {
+            height: 24px; /* Adjust size to match your logo height */
+            width: auto;
+        }  
+        .top-nav {        
+          position: fixed;         
+          top: 0;        
+          left: 0;        
+          width: 100%;        
+          height: 70px;        
+          background-color: #4F4FFF;        
+          color: #fff;        
+          display: flex;        
+          justify-content: 
+          space-between;         
+          align-items: center;        
+          padding: 0 5%;         
+          box-sizing: border-box;        
+          z-index: 1000;     
+        }
+        /* 3. Small Nav Button */
+        .nav-btn {    
+          background-color: transparent;    
+          color: #fff;    
+          border: 1px solid #fff;    
+          padding: 8px 16px;    
+          font-size: 0.8rem;    
+          font-weight: bold;    
+          cursor: pointer;    
+          transition: 0.3s;}    
+      .logo {        
+        font-weight: 800;        
+        font-size: 1.5rem;        
+        letter-spacing: 2px;    
+      }
+      .nav-btn:hover {    
+        background-color: #fff;    
+        color: #000;}    
+      /* Updated styling for the Anchor Nav Button */    
+      .nav-btn {        
+        text-decoration: none; 
+      /* Removes the underline */        
+        display: inline-block;        
+        background-color: transparent;        
+        color: #fff;        
+        border: 1px solid #fff;        
+        padding: 8px 16px;        
+        font-size: 0.8rem;        
+        font-weight: bold;        
+        cursor: pointer;        
+        transition: 0.3s;    }    
+      .nav-btn:hover {        
+        background-color: #fff;        
+        color: #4F4FFF;    
+      }    
+      /* The Wireframe Container */        
+      .wireframe-card {            
+        border: 10px solid #4F4FFF; 
+      /* The thin wireframe border */            
+        padding: 40px;            
+        display: flex;            
+        flex-direction: column;            
+        align-items: center;            
+        text-align: center;                        
+        /* Responsive Sizing */            
+        width: 100%;            
+        max-width: 500px; 
+        /* Limits width on desktop */            
+        border-radius: 8px; 
+        /* Optional: subtle rounded corners */            
+        background-color: #1F1FFF; 
+        /* Contrast against body */                        
+        /* Add a subtle shadow to make the "frame" pop */            
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);        }    
+      .wireframe-card {        
+        border: 10px solid #2F2FFF;         
+        padding: 40px;        
+        display: flex;        
+        flex-direction: column;        
+        align-items: center;        
+        text-align: center;        
+        width: 100%;        
+        max-width: 500px;         
+        border-radius: 8px;         
+        background-color: #1F1FFF;         
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);    
+      }    
+      /* Styling for the SVG near the H1 */
+      h1 {
+          display: flex;
+          flex-direction: column; /* Stack them on top of each other */
+          align-items: center;
+          gap: 15px;
+          color: #FFFFFF;
+      }
+
+      /* If you want the SVG next to the H1 instead of above it, 
+      change 'column' to 'row' in the h1 rule above */
+
+      .svg-icon-large {
+          height: 60px; /* Larger size for the main header */
+          width: auto;
+      }    
+      /* Updated styling for the Main Anchor Button */    
+      .btn {        
+        /* Width settings */        
+        text-decoration: none; 
+        /* Removes the underline */        
+        display: inline-block;        
+        width: 100%;        
+        max-width: 400px; 
+        /* Limits how wide it gets on desktop */                
+        /* Padding and Typography */        
+        max-width: 400px;         
+        padding: 15px 20px;        
+        font-size: clamp(0.9rem, 4vw, 1.1rem);        
+        font-weight: bold;        
+        text-transform: uppercase;                
+        /* Aesthetics */        
+        cursor: pointer;        
+        border: none;        
+        border-radius: 8px;        
+        background-color: #4F4FFF;        
+        color: #fff;        
+        transition: transform 0.2s, 
+        background-color 0.2s;        
+        text-align: center;    
+      }    
+      /* Hover effect for desktop */    
+      .btn:hover {        
+        background-color: #333;        
+        transform: scale(1.02);    
+      }    
+      /* Active effect for mobile taps */    
+      .btn:active {        
+        transform: scale(0.98);    }    
+      .footer {        
+        position: absolute; 
+        /* Keeps it at the bottom of the screen */        
+        position: absolute;         
+        bottom: 0;        
+        left: 0;        
+        width: 100%;            
+        background-color: #4F4FFF; 
+        /* Solid black */        
+        color: #fff;           
+        /* White text */            
+        background-color: #4F4FFF;         
+        color: #fff;                   
+        text-align: center;        
+        padding: 15px 0;       
+        /* Vertical spacing */        
+        padding: 15px 0;               
+        font-size: 0.8rem;        
+        letter-spacing: 1px;        
+        font-weight: bold;@@ -169,15 +137,16 @@
+</style>
+<body>    
+  <nav class="top-nav">        
+    <div class="logo">
+      SYMMETRON
+    </div>               
+    <!-- CHANGED FROM BUTTON TO A -->        
+    <a href="https://forms.gle/opubWJ21KhRj767B9" class="nav-btn">FOUNDING FORM</a>    
+  </nav>    
+  <div class="wireframe-card">        
+    <h1>
+     SYMMETRON
+    </h1>              
+    <!-- CHANGED FROM BUTTON TO A -->        
+    <a href="https://forms.gle/opubWJ21KhRj767B9" id="myButton" class="btn">            
+        FOUNDING FORM        
+    </a>    
+  </div>    
+  <footer class="footer">
+        <p>symmetron</p>
+    </footer>
+
+</body>
+</html>   
